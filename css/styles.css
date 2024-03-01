@@ -1,0 +1,116 @@
+/* Definir variables CSS */
+:root {
+  --main-background-color: hsl(212, 45%, 89%);
+  --container-background-color: hsl(0, 0%, 100%);
+  --title-color: hsl(218, 44%, 22%);
+  --text-color: hsl(220, 15%, 55%); 
+  --border-radius: 5%;
+  --padding: 20px;
+}
+
+/* Estilos globales */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-background-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--container-background-color);
+  border-radius: var(--border-radius);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* Esto garantiza que el padding se incluya en el ancho y alto del elemento */
+  border-radius: var(--border-radius);
+}
+
+.qr-image {
+  border-radius: var(--border-radius);
+  object-fit: cover;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title, .text {
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.title {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 700;
+  color: var(--title-color);
+}
+
+.text {
+  font-weight: 400; 
+  font-size: 15px;
+  color: var(--text-color);
+  margin-top: -5px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    width: 85%;
+    height: 72%;
+  }
+
+  .content {
+    width: 90%;
+    height: 93%;
+  }
+
+  .qr-image {
+    width: 100%;
+    height: 65%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    width: 390px;
+    height: 600px;
+  }
+
+  .content {
+    width: 350px;
+    height: 550px;
+  }
+
+  .qr-image {
+    width: 100%;
+    height: 65%;
+  }
+}
+
